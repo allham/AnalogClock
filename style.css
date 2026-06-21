@@ -1,4 +1,4 @@
-body{
+/* body{
     margin:0;
     padding:0;
     background-color:darkgray;
@@ -74,7 +74,6 @@ h2{
     content:"";
     width:20px;
     height:20px;
-    /* background-color:slateblue; */
     background-color:transparent;
     background-color:lemonchiffon;
     border-radius:50%;
@@ -116,4 +115,102 @@ p{
     border:solid aqua 1px;
     transform:translateX(-50%);
     box-shadow:2px 4px 4px rebeccapurple;
+} */
+ body{
+    margin:0;
+    padding:0;
+    background-color:black;
+    display:flex;
+    color:green;
+    height:100vh;
+    justify-content:center;
+    align-items:center;
+}
+.clock{
+    box-shadow:2px 2px 2px rgba(255, 255, 255, 0.5);
+    position:relative;
+    border:crimson solid  1px;
+    width:300px;
+   height:300px;
+    border-radius:50%;
+}
+
+img{
+    position:absolute;
+    top:30%;
+    left:50%;
+    transform:translateX(-50%);
+    width:80px;
+}
+.clock-numbers div{
+    position:absolute;
+    font-size:22px;
+    color:lightgreen;
+}
+.twelve{
+    top:10px;
+    left:50%;
+    transform:translateX(-50%);
+}
+.three{
+    top:50%;
+    right:10px;
+    transform:translateY(-50%);
+}
+.six{
+    bottom:10px;
+    left:50%;
+    transform:translateX(-50%);
+}
+.nine{
+    top:50%;
+    left:10px;
+    transform:translateY(-50%);
+}
+.clock-arrows{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.clock-arrows::before{
+    content:"";
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background-color:black;
+    z-index:4;
+    border:1px solid lightblue;
+}
+.clock-arrows div{
+    box-shadow:2px 4px 4px rgba(220, 220, 220, .6); 
+    background-color:lightblue;
+    width:8px;
+    height:118px;
+    position:absolute;
+    bottom:50%;
+    transform-origin:bottom center;
+    border-top-left-radius:50%;
+    border-top-right-radius:50%;
+    z-index:1;
+}
+.clock-arrows .hours{
+    height:90px;
+    transform:rotate(45deg);
+}
+.clock-arrows .seconds{
+    transform:rotate(180deg);
+    width:5px;
+    z-index:2;
+    background-color:red;
+}
+h2{
+    position:absolute;
+    bottom:20%;
+    left:50%;
+    letter-spacing:5px;
+    font-weight:bold;
+    color:slategray;
+    transform:translateX(-50%);
 }
